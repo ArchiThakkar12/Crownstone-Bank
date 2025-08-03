@@ -1,7 +1,6 @@
-package com.crownstonebank;
+package com.crownstonebank.filter;
 
 import com.crownstonebank.entity.User;
-import com.crownstonebank.repository.UserRepository;
 import com.crownstonebank.service.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
