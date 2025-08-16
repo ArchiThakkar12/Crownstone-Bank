@@ -35,13 +35,14 @@ public class User implements UserDetails {
     private long phoneNumber;
     private String tag;
     private Gender gender;
+    private Date dob;
 
     @CreationTimestamp
     private LocalDateTime createdAt;
 
     @UpdateTimestamp
     private LocalDateTime updatedAt;
-    private Date dob;
+
 
     private List<String> roles;
 
