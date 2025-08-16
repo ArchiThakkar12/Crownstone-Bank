@@ -4,6 +4,7 @@ import com.crownstonebank.dto.UserDTO;
 import com.crownstonebank.entity.User;
 import com.crownstonebank.service.UserService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,5 +23,10 @@ public class UserController {
 
     public ResponseEntity<?> authenticateUser(@RequestBody UserDTO userDTO) {
         var authObject = userService.authenticateUser(userDTO);
+
+        return  ResponseEntity.ok()
+                .header(HttpHeaders.AUTHORIZATION, authObject.get("token").toString())
+                .body(authObject.get("user"));
+
     }
 }
