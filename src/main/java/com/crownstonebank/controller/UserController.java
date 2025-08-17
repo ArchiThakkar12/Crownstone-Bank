@@ -21,6 +21,7 @@ public class UserController {
         return ResponseEntity.ok(registeredUser);
     }
 
+    @PostMapping("/auth")
     public ResponseEntity<?> authenticateUser(@RequestBody UserDTO userDTO) {
         var authObject = userService.authenticateUser(userDTO);
 
