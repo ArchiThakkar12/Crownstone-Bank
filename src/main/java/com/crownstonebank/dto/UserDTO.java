@@ -1,7 +1,6 @@
 package com.crownstonebank.dto;
 
 import com.crownstonebank.entity.Gender;
-import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
